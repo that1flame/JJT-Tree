@@ -1,23 +1,24 @@
 let modInfo = {
-	name: "The ??? Tree",
-	author: "nobody",
-	pointsName: "points",
-	modFiles: ["layers.js", "tree.js"],
+	name: "JJT Prestige Tree",
+	id: "jjttreeflmvr",
+	author: "that1flame",
+	pointsName: "skill",
+	modFiles: ["layers/classn1.js", "tree.js"],
 
 	discordName: "",
 	discordLink: "",
 	initialStartPoints: new Decimal (10), // Used for hard resets and new players
-	offlineLimit: 1,  // In hours
+	offlineLimit: 2400,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "Literally nothing",
+	num: "0.1",
+	name: "Active Development",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
-	<h3>v0.0</h3><br>
+	<h3>v0.1</h3><br>
 		- Added things.<br>
 		- Added stuff.`
 
