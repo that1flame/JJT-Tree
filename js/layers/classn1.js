@@ -24,5 +24,13 @@ addLayer("n1", {
     hotkeys: [
         {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+
+    upgrades: {
+        11: {
+            title: "The First Difficulty I",
+            description: "Start gaining Skill.",
+            cost: new Decimal(1),
+        },
+    }
 })
