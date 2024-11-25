@@ -44,7 +44,7 @@ addLayer("n1", {
             description: "Skill boosts itself.",
             cost: new Decimal(3),
             effect() {
-                return Decimal.log10(player.classn1.points.add(20)).pow(0.9);
+                return Decimal.log10(player.classn1.wins.add(20)).pow(0.9);
             }
         },
 
@@ -52,15 +52,6 @@ addLayer("n1", {
             title: "The First Difficutly IV",
             description: "3x Skill gain.",
             cost: new Decimal(5),
-        },
-
-        15: {
-            title: "The First Difficulty V",
-            description: "Skill boosts itself.",
-            cost: new Decimal(10),
-            effect() {
-                return Decimal.log10(player.classn1.points.add(1)).pow(expu5)
-            }
         },
     }
 })
