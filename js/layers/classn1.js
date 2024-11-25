@@ -15,6 +15,7 @@ addLayer("n1", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
+        if (hasUpgrade('n1', 13)) mult = mult.times(upgradeEffect('n1', 13))
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -31,6 +32,21 @@ addLayer("n1", {
             title: "The First Difficulty I",
             description: "Start gaining Skill.",
             cost: new Decimal(1),
+        },
+
+        12: {
+            title: "The First Difficulty II",
+            description: "2x Skill gain.",
+            cost: new Decimal(2),
+        },
+
+        13: {
+            title: "The First Difficulty III",
+            description: "Skill boosts itself.",
+            cost: new Decimal(5),
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
         },
     }
 })
