@@ -41,10 +41,10 @@ addLayer("n1", {
 
         13: {
             title: "The First Difficulty III",
-            description: "Wins is boosted based on Skill.",
+            description: "Skill boosts itself.",
             cost: new Decimal(3),
             effect() {
-                return Decimal.log10(player[this.layer].wins.add(20)).pow(0.9);
+                return Decimal.log10(player.classn1.wins.add(20)).pow(0.9);
             }
         },
 
