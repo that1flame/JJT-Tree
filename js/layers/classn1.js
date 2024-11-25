@@ -43,9 +43,9 @@ addLayer("n1", {
         13: {
             title: "The First Difficulty III",
             description: "Skill boosts itself.",
-            cost: new Decimal(5),
+            cost: new Decimal(3),
             effect() {
-                return player[this.layer].points.add(1).pow(0.5)
+                return Decimal.log10(player.points.add(20)).pow(0.9);
             },
         },
     }
