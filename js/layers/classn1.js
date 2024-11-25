@@ -46,7 +46,7 @@ addLayer("n1", {
             cost: new Decimal(3),
             effect() {
                 return Decimal.log10(player.points.add(20)).pow(0.9);
-            },
+            }
         },
     }
 })
