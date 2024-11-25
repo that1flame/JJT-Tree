@@ -44,7 +44,7 @@ addLayer("n1", {
             description: "Skill boosts itself.",
             cost: new Decimal(3),
             effect() {
-                return Decimal.log10(player[this.layer].points.add(20)).pow(0.9);
+                return Decimal.log10(player[this.layer].wins.add(20)).pow(0.9);
             }
         },
     }
